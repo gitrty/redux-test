@@ -4,6 +4,7 @@ import Son2 from './Son2'
 import HomePage from './HomePage'
 import ReduxTest from './ReduxTest'
 import ReactReduxTest from './ReactReduxTest'
+import Hooks from './Hooks'
 import {
   Route, // 路由视图
   // Link,  // 路由导航
@@ -14,11 +15,11 @@ import {
 } from 'react-router-dom'
 
 class Home extends Component {
-  funnn (name) {
+  funnn(name) {
     console.info(name)
   }
 
-  render () {
+  render() {
     return (
       <div>
         我是Home组件
@@ -30,6 +31,7 @@ class Home extends Component {
         <NavLink to='/homepage'>NavLink - HomePage</NavLink> |||
         <NavLink to='/redux'>NavLink - Redux</NavLink> |||
         <NavLink to='/reactredux'>NavLink - React-Redux</NavLink> |||
+        <NavLink to='/hooks'>NavLink - React-Hooks</NavLink> |||
         {/* 编程式跳转 */}
         <button
           onClick={() => {
@@ -49,6 +51,7 @@ class Home extends Component {
           <Route path='/son2' component={Son2}></Route>
           <Route path='/redux' component={ReduxTest}></Route>
           <Route path='/reactredux' component={ReactReduxTest}></Route>
+          <Route path='/hooks' component={Hooks}></Route>
           <Redirect from='/redirect' to='son' exact></Redirect>
         </Switch>
       </div>

@@ -14,6 +14,7 @@ function App(props) {
   console.info(props)
 
   // useState 可以在函数组件中使用 状态 - 多个状态时，建议创建多个useState()
+  // hooks 声明时不能放在条件语句中（if等）
   let [val, setVal] = useState(0)
   // let [val1, setVal1] = useState(1)
   // let [val2, setVal2] = useState(2)

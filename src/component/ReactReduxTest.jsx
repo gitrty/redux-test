@@ -12,7 +12,7 @@ let mapDispatchToProps = dispatch => ({
 })
 
 class ReactReduxTest extends Component {
-  render () {
+  render() {
     console.info(this.props)
     return (
       <div>
@@ -25,6 +25,11 @@ class ReactReduxTest extends Component {
         >
           乘
         </button>
+        {/* 
+          在不使用 mapDispatchToProps 的情况下，可直接通过this.props.dispatch()来派发action，
+          但若使用了 mapDispatchToProps ，则 this.props 中就不在有 dispatch
+        */}
+        {/* <button onClick={() => { this.props.dispatch({ type: 'CHU', data: 2 }) }}>乘---</button> */}
       </div>
     )
   }
