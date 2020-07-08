@@ -7,11 +7,15 @@ import {
   // BrowserRouter,   // 刷新会丢失
   HashRouter   // 刷新页面后，历史记录依然存在
 } from 'react-router-dom'
+import { store } from './redux/store'
+import { Provider } from 'react-redux'
 
 ReactDOM.render(
   <React.StrictMode>
     <HashRouter>
-      <App />
+      <Provider store={store}>
+        <App />
+      </Provider>
     </HashRouter>
   </React.StrictMode>,
   document.getElementById('root')
